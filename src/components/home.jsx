@@ -10,17 +10,17 @@ export default function Home() {
         </div>
 
         <div className="card-menu">
-          <h3>📋 Listar Palestrantes</h3>
+          <h3> Listar Palestrantes</h3>
           <p>Gerencie todos os palestrantes ativos.</p>
         </div>
 
         <div className="card-menu">
-          <h3>📅 Criar Novo Evento</h3>
+          <h3>Criar Novo Evento</h3>
           <p>Monte uma agenda vinculando a um palestrante.</p>
         </div>
 
         <div className="card-menu">
-          <h3>👁️ Visualizar Eventos</h3>
+          <h3> Visualizar Eventos</h3>
           <p>Confira a listagem de eventos agendados.</p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-import Home from './components/Home';
+import Home from './components/home';
 import CadastrarPalestrante from './components/CadastrarPalestrante';
 import ListarPalestrantes from './components/ListarPalestrantes';
 import CadastrarEvento from './components/CadastrarEvento';
