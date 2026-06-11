@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-// Importando nossos componentes separados
 import Home from './components/Home';
 import CadastrarPalestrante from './components/CadastrarPalestrante';
 import ListarPalestrantes from './components/ListarPalestrantes';
