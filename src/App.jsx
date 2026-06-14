@@ -8,7 +8,6 @@ import CadastrarEvento from './components/CadastrarEvento';
 import ListarEventos from './components/ListarEventos';
 import Rodape from './components/rodape';
 
-
 export default function App() {
   const [tela, setTela] = useState('home');
   const [palestrantes, setPalestrantes] = useState([]);
@@ -37,7 +36,6 @@ export default function App() {
     carregarEventos();
   }, []);
 
-  // 👇 Função Corrigida com captura de erros reais!
   const cadastrarPalestrante = async (e) => {
     e.preventDefault();
     try {
@@ -53,17 +51,16 @@ export default function App() {
         throw new Error(dados.erro || dados.error || "Erro misterioso no servidor");
       }
       
-      alert(" Palestrante cadastrado com sucesso!");
+      alert("Palestrante cadastrado com sucesso!");
       setFormPalestrante({ nome: '', email: '', especialidade: '' });
       carregarPalestrantes();
       setTela('listarPalestrantes');
     } catch (err) {
-      console.error(" Erro capturado:", err);
+      console.error("Erro capturado:", err);
       alert("Falha ao cadastrar: " + err.message);
     }
   };
 
-  // 👇 BÔNUS: Função de Eventos também protegida!
   const cadastrarEvento = async (e) => {
     e.preventDefault();
     try {
@@ -79,12 +76,12 @@ export default function App() {
         throw new Error(dados.erro || dados.error || "Erro misterioso no servidor");
       }
       
-      alert(" Evento cadastrado com sucesso!");
+      alert("Evento cadastrado com sucesso!");
       setFormEvento({ titulo: '', data_evento: '', palestrantes_id: '' });
       carregarEventos();
       setTela('listarEventos');
     } catch (err) {
-      console.error(" Erro capturado:", err);
+      console.error("Erro capturado:", err);
       alert("Falha ao cadastrar evento: " + err.message);
     }
   };
@@ -92,7 +89,7 @@ export default function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1 onClick={() => setTela('home')} style={{ cursor: 'pointer' }}>SENAI Eventos </h1>
+        <h1 onClick={() => setTela('home')} style={{ cursor: 'pointer' }}>SENAI Eventos</h1>
       </header>
 
       <main className="app-conteudo">
@@ -121,6 +118,7 @@ export default function App() {
         
         {tela === 'listarEventos' && <ListarEventos setTela={setTela} eventos={eventos} />}
       </main>
+      
       <Rodape />
     </div>
   );
